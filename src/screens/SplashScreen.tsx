@@ -1,4 +1,4 @@
-import {Image, StyleSheet} from 'react-native';
+import {Image, StyleSheet, ImageBackground} from 'react-native';
 import React, {useEffect} from 'react';
 import logo from '../images/logo.png';
 import bg from '../images/SplashScreen.png';
@@ -15,8 +15,8 @@ const SplashScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={bg} style={styles.bg} />
-      <Image source={logo} />
+      <ImageBackground source={bg} resizeMode="stretch" style={styles.bg} />
+      <Image source={logo} style={styles.logo} />
     </SafeAreaView>
   );
 };
@@ -26,12 +26,15 @@ export default SplashScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     position: 'relative',
   },
   bg: {
-    position: 'absolute',
     flex: 1,
+    justifyContent: 'center',
+  },
+  logo: {
+    position: 'absolute',
+    alignSelf: 'center',
+    top: '40%',
   },
 });

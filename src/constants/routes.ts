@@ -3,5 +3,6 @@ export type AppRootParamList = {
   SplashScreen: undefined;
   Onboarding: undefined;
   SignIn: undefined;
+  SignUp: undefined;
   TestScreen: undefined;
 };
