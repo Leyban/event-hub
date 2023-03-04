@@ -30,7 +30,7 @@ const SignUp = () => {
   const {navigate} = useNavigation();
 
   return (
-    <SafeAreaView style={[styles.container, {backgroundColor: 'pink'}]}>
+    <SafeAreaView style={styles.container}>
       <ImageBackground source={bg} resizeMode="stretch" style={styles.bg} />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -38,7 +38,7 @@ const SignUp = () => {
         <Pressable style={styles.back} onPress={() => navigate('SignIn')}>
           <Image source={back} />
         </Pressable>
-        <Text style={styles.signInLabel}>Sign up</Text>
+        <Text style={styles.signUpLabel}>Sign up</Text>
         <View style={styles.inputContainer}>
           <Image source={profile} />
           <TextInput
@@ -85,7 +85,10 @@ const SignUp = () => {
             {hiddenConfirm ? <Image source={hide} /> : <Image source={view} />}
           </TouchableOpacity>
         </View>
-        <PrimaryButtonNext text="SIGN UP" />
+        <PrimaryButtonNext
+          text="SIGN UP"
+          onPress={() => navigate('Verification')}
+        />
         <SocialLogin
           questionText="Already have an account?"
           actionText="Sign in"
@@ -115,7 +118,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingLeft: 15,
   },
-  signInLabel: {
+  signUpLabel: {
     color: '#222',
     fontSize: 20,
     fontWeight: 'bold',

@@ -68,9 +68,13 @@ const SignIn = () => {
             toggler={() => setRemember(!remember)}
           />
           <Text style={styles.rememberText}>Remember Me</Text>
-          <Text style={styles.forgotText}>Forgot Password?</Text>
+          <Text
+            style={styles.forgotText}
+            onPress={() => navigate('ResetPassword')}>
+            Forgot Password?
+          </Text>
         </View>
-        <PrimaryButtonNext text="SIGN IN" />
+        <PrimaryButtonNext text="SIGN IN" onPress={() => {}} />
         <SocialLogin
           questionText={"Don't have and account?"}
           actionText={'Sign up'}

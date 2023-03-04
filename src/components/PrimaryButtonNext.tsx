@@ -4,7 +4,7 @@ import arrowRight from './../images/icons/ArrowRight.png';
 
 interface PrimaryButtonNextProps {
   text: string;
-  onPress?: () => void;
+  onPress: () => void;
 }
 
 const PrimaryButtonNext = ({text, onPress}: PrimaryButtonNextProps) => {

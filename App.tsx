@@ -6,6 +6,8 @@ import Onboarding from './src/screens/Onboarding';
 import TestScreen from './src/screens/TestScreen';
 import SignIn from './src/screens/SignIn';
 import SignUp from './src/screens/SignUp';
+import Verification from './src/screens/Verification';
+import ResetPassword from './src/screens/ResetPassword';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,16 @@ function App(): JSX.Element {
         <Stack.Screen
           name="SignUp"
           component={SignUp}
+          options={{headerShown: false, animation: 'slide_from_right'}}
+        />
+        <Stack.Screen
+          name="Verification"
+          component={Verification}
+          options={{headerShown: false, animation: 'slide_from_right'}}
+        />
+        <Stack.Screen
+          name="ResetPassword"
+          component={ResetPassword}
           options={{headerShown: false, animation: 'slide_from_right'}}
         />
         <Stack.Screen

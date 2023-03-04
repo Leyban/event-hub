@@ -4,5 +4,7 @@ export type AppRootParamList = {
   Onboarding: undefined;
   SignIn: undefined;
   SignUp: undefined;
+  Verification: undefined;
+  ResetPassword: undefined;
   TestScreen: undefined;
 };
